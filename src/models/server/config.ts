@@ -1,11 +1,11 @@
-import env from "@/app/env";
+ import env from "@/app/env";
 
 import {Avatars,Client,Databases,Storage,Users} from 'node-appwrite';
 
 let client = new Client();
 
 client
-    .setEndpoint("https://fra.cloud.appwrite.io/v1") // Your API Endpoint
+    .setEndpoint(env.appwrite.endpoint) // Your API Endpoint
     .setProject(env.appwrite.ProjectId) // Your project ID
     .setKey(env.appwrite.apikey) // Your secret API key
 ;
